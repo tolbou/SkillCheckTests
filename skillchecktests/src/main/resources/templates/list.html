@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>ユーザー情報一覧</h1>
+    <div class="float-end">
+      <a th:href="@{/newuser}" class="btn btn-primary">新規登録はこちら</a>
+    </div>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>名前</th>
+          <th>メールアドレス</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr th:each="user : ${userlist}" th:object="${userlist}" class="align-middle">
+          <td th:text="${user.id}"></td>
+          <td th:text="${user.name}"></td>
+          <td th:text="${user.upn}"></td>
+          <td><a th:href="@{/list/{id}(id=${user.id})}" class="btn btn-secondary">詳細</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
