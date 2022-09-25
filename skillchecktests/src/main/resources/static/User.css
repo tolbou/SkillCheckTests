@@ -1,24 +1,11 @@
-table {
-    width: 90%;
-    border-collapse: collapse;
-    font-size: 12px;
+.container{
+    margin: 0 auto;
+    width: 100%
+    
 }
-table th, table td {
-    border: 1px solid #ddd;
-    padding: 6px;
-}
-table th {
-    background-color: #F2F2F2;
-}
-.center {
-    text-align: center;
-}
-#create {
-	margin: 10px;
-}
-#righttext {
-    text-align: right;
-}
-#linktext {
-    color:black;
-}
+body {
+    background-image: url("https://img.freepik.com/premium-photo/blue-and-pink-color-paper-background_322958-82.jpg?w=996");
+    background-size: cover;
+ 
+  }
+
