@@ -16,3 +16,4 @@ public class UserUpdateRequest extends UserRequest implements Serializable {
   @NotNull
   private Long id;
 }
+//

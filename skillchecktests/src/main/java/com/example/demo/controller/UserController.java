@@ -12,6 +12,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -87,6 +88,7 @@ public class UserController {
 		userUpdateRequest.setId(userEntity.getId());
 		userUpdateRequest.setName(userEntity.getName());
 		userUpdateRequest.setUpn(userEntity.getUpn());
+		userUpdateRequest.setPassword(userEntity.getPassword());
 		model.addAttribute("userUpdateRequest", userUpdateRequest);
 		return "edit";
 	}
@@ -115,5 +117,14 @@ public class UserController {
 		userService.delete(id);
 		return "redirect:/list";
 	}
-
-}
+	
+	//ログイン画面
+	 @GetMapping("/login")
+	    public String disp1() {
+	        return "login";
+	    }
+	    @PostMapping("/list")
+	    public String testPage() {
+	        return "list";
+	    }
+}////

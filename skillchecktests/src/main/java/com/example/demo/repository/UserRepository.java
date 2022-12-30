@@ -9,3 +9,4 @@ import com.example.demo.entitiy.UserEntity;
 public interface UserRepository extends JpaRepository<UserEntity, Long> {
 
 }
+//

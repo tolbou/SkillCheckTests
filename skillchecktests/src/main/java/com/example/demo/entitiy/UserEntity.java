@@ -27,6 +27,9 @@ public class UserEntity implements Serializable{
 
 	    @Column(name = "upn")
 	    private String upn;
+	    
+	    @Column(name = "password")
+	    private String password;
 	}
 
-
+//

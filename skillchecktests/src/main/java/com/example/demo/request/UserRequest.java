@@ -22,6 +22,11 @@ public class UserRequest implements Serializable {
   @Email(message = "正しい形式で入力してください")
   @NotEmpty(message = "メールアドレスを入力してください")
   private String upn;
+  
+
+  @NotEmpty(message = "パスワードを入力してください")
+  private String password;
 
 
 }
+//

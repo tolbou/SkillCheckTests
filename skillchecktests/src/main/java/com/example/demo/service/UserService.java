@@ -38,6 +38,7 @@ public class UserService {
 		UserEntity userEntity = new UserEntity();
 		userEntity.setName(userRequest.getName());
 		userEntity.setUpn(userRequest.getUpn());
+		userEntity.setPassword(userRequest.getPassword());
 		userRepository.save(userEntity);
 	}
 
@@ -46,6 +47,7 @@ public class UserService {
 		UserEntity userEntity = findById(userUpdateRequest.getId());
 		userEntity.setName(userUpdateRequest.getName());
 		userEntity.setUpn(userUpdateRequest.getUpn());
+		userEntity.setPassword(userUpdateRequest.getPassword());
 		userRepository.save(userEntity);
 	}
 
@@ -56,3 +58,4 @@ public class UserService {
 	}
 
 }
+//
